@@ -19,6 +19,7 @@ import Chatbot from './components/pages/Chatbot/Chatbot'
 import Securitytips from "./components/pages/Securitytips/Securitytips";
 import Message from "./components/pages/Message/Message";
 import Faq from "./components/pages/Faq/Faq";
+import BankDashboard from "./components/pages/BankSimulation/BankDashboard";
 function App() {
   return (
     <>
@@ -46,6 +47,7 @@ function App() {
         <Route path="/Securitytips" element={<Securitytips/>}/>
         <Route path="/Faq" element={<Faq/>}/>
         <Route path="/Message" element={<Message/>}/>
+         <Route path="/BankDashboard" element={<BankDashboard/>}/>
 
       </Routes>
     </BrowserRouter>

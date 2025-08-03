@@ -66,6 +66,7 @@ const Header = () => {
               <li><a href="/" className="nav-link custom-nav-btn">Home</a></li>
               <li><a href="/AboutUs" className="nav-link custom-nav-btn">About Us</a></li>
               <li><a href="/AboutProject" className="nav-link custom-nav-btn">About Project</a></li>
+              <li><a href="/BankDashboard" className="nav-link custom-nav-btn">Bank Dashboard</a></li>
             </ul>
           )}
 
@@ -74,6 +75,7 @@ const Header = () => {
               <li><a href="/" className="nav-link custom-nav-btn">Home</a></li>
               <li><a href="/AboutUs" className="nav-link custom-nav-btn">About Us</a></li>
               <li><a href="/AboutProject" className="nav-link custom-nav-btn">About Project</a></li>
+               <li><a href="/BankDashboard" className="nav-link custom-nav-btn">Bank Dashboard</a></li>
             </ul>
             <a
               href="#"
