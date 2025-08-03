@@ -62,7 +62,7 @@ const BankDashboard = () => {
         {!showUsers ? (
           <>
             <h2 style={{ textAlign: 'center' }}> Bank AI Fraud Detection Dashboard</h2>
-            <p style={{ textAlign: 'center', fontSize: '18px' }}>👥 Total Users: <strong>{users.length}</strong></p>
+         
 
             <div
               style={{
