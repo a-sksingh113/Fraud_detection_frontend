@@ -37,11 +37,26 @@ const BankDashboard = () => {
   }, []);
 
   return (
+    <div style={{
+  backgroundImage: `url(/path-to-image.jpg)`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  minHeight: '100vh',
+}}>
     <Layout>
-    <div style={{ display: 'flex', fontFamily: 'Arial, sans-serif' }}>
+    <div style={{ display: 'flex',
+       fontFamily: 'Arial, sans-serif',
+       }}>
       
       {/* Sidebar */}
-      <div style={{ width: '200px', backgroundColor: '#f2f2f2', padding: '20px', height: '100vh' }}>
+      <div style={{marginTop:'75px',height:''}}>
+         <div style={{ width: '200px',
+           backgroundColor: 'rgba(0, 4, 9, 0.8)',
+            padding: '20px',
+             height: '100vh',
+             borderStartEndRadius:'20px' 
+              }}>
         <h3 style={{ marginBottom: '20px' }}> Menu</h3>
         <button
           onClick={() => setShowUsers(false)}
@@ -56,23 +71,48 @@ const BankDashboard = () => {
           All Users
         </button>
       </div>
+      </div>
+     
 
       {/* Main Content */}
       <div style={{ flex: 1, padding: '30px' }}>
         {!showUsers ? (
           <>
+           <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "40px 20px",
+        }}
+      >
+        <div
+          style={{
+            width: "90%",
+            maxWidth: "1200px",
+            backgroundColor: "rgba(13, 50, 89, 0.8)",
+            borderRadius: "1rem",
+            boxShadow: "0 8px 24px rgba(0, 0, 0, 0.1)",
+            padding: "2rem",
+            fontFamily: '"Segoe UI", sans-serif',
+          }}
+        >
             <h2 style={{ textAlign: 'center' }}> Bank AI Fraud Detection Dashboard</h2>
          
 
             <div
+              
               style={{
-                border: '1px solid #ccc',
-                padding: '10px',
-                borderRadius: '8px',
-                marginTop: '20px',
-                maxHeight: '500px',
-                overflowY: 'auto',
-              }}
+               border: '1px solid #ccc',
+               padding: '1rem',
+               borderRadius: '0.5rem',
+              marginTop: '1.5rem',
+               maxHeight: '60vh',           // 60% of viewport height
+               overflowY: 'auto',
+               backgroundColor: 'white',    // optional for contrast
+               color: 'black',
+    }}
             >
               {logs.length === 0 ? (
                 <p style={{ textAlign: 'center', color: 'gray' }}>No user activities logged yet.</p>
@@ -83,6 +123,7 @@ const BankDashboard = () => {
                     style={{
                       backgroundColor: log.type === 'fraud' ? '#ffe6e6' : '#e6ffe6',
                       padding: '10px',
+                      color:'black',
                       marginBottom: '10px',
                       borderRadius: '5px',
                       boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
@@ -97,19 +138,41 @@ const BankDashboard = () => {
                 ))
               )}
             </div>
+            </div>
+            </div>
           </>
         ) : (
           <>
+              <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "40px 20px",
+        }}
+      >
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "850px",
+            backgroundColor: "rgba(13, 50, 89, 0.8)",
+            borderRadius: "16px",
+            boxShadow: "0 8px 24px rgba(0, 0, 0, 0.1)",
+            padding: "40px",
+            fontFamily: '"Segoe UI", sans-serif',
+          }}
+        >
             <h2 style={{ textAlign: 'center' }}>👥 All Users</h2>
             {users.length === 0 ? (
-              <p style={{ textAlign: 'center', color: 'gray' }}>No users found.</p>
+              <p style={{ textAlign: 'center', color: 'black' }}>No users found.</p>
             ) : (
               <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
                 <thead>
                   <tr>
                     <th style={thStyle}>Name</th>
                     <th style={thStyle}>Email</th>
-                    <th style={thStyle}>Merchant ID</th>
+                    <th style={thStyle}>MerchantID</th>
                     <th style={thStyle}>Account No</th>
                     <th style={thStyle}>Phone</th>
                   </tr>
@@ -119,26 +182,29 @@ const BankDashboard = () => {
                     <tr key={idx}>
                       <td style={tdStyle}>{user.name}</td>
                       <td style={tdStyle}>{user.email}</td>
-                      <td style={tdStyle}>{user.merchantId}</td>
-                      <td style={tdStyle}>{user.accountNumber}</td>
+                      <td style={tdStyle}>{user.merchantID}</td>
+                      <td style={tdStyle}>{user._id}</td>
                       <td style={tdStyle}>{user.phone}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             )}
+            </div>
+            </div>
           </>
         )}
       </div>
     </div>
     </Layout>
+    </div>
   );
 };
 
 const thStyle = {
   border: '1px solid #ccc',
   padding: '10px',
-  backgroundColor: '#f8f8f8',
+  backgroundColor: 'black',
   fontWeight: 'bold',
   textAlign: 'left'
 };
