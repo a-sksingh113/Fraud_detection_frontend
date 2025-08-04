@@ -36,7 +36,7 @@ const BankDashboard = () => {
       fetchUsers();
     }, 3000);
 
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 1100);
     window.addEventListener('resize', handleResize);
     handleResize();
 
