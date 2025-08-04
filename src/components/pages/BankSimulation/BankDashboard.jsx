@@ -37,14 +37,9 @@ const BankDashboard = () => {
   }, []);
 
   return (
-    <div style={{
-  backgroundImage: `url(/path-to-image.jpg)`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
-  minHeight: '100vh',
-}}>
+   
     <Layout>
+     
     <div style={{ display: 'flex',
        fontFamily: 'Arial, sans-serif',
        }}>
@@ -54,8 +49,9 @@ const BankDashboard = () => {
          <div style={{ width: '200px',
            backgroundColor: 'rgba(0, 4, 9, 0.8)',
             padding: '20px',
-             height: '100vh',
-             borderStartEndRadius:'20px' 
+             minHeight: '100vh',
+             borderStartEndRadius:'20px', 
+             position:'sticky'
               }}>
         <h3 style={{ marginBottom: '20px' }}> Menu</h3>
         <button
@@ -167,7 +163,7 @@ const BankDashboard = () => {
             {users.length === 0 ? (
               <p style={{ textAlign: 'center', color: 'black' }}>No users found.</p>
             ) : (
-              <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
+              <table style={{ width: '100vw', borderCollapse: 'collapse', marginTop: '20px' }}>
                 <thead>
                   <tr>
                     <th style={thStyle}>Name</th>
@@ -197,7 +193,7 @@ const BankDashboard = () => {
       </div>
     </div>
     </Layout>
-    </div>
+    // </div>
   );
 };
 

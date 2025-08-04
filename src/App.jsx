@@ -23,10 +23,12 @@ import BankDashboard from "./components/pages/BankSimulation/BankDashboard";
 function App() {
   return (
     <>
+    
     <img
         src={bgImage}
         alt="background"
         className="fullscreen-bg"
+       
       />
     
     <BrowserRouter>
