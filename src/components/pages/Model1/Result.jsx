@@ -56,7 +56,7 @@ const Result = () => {
             //color: "white",
           }}
         >
-          <h2 style={{ fontSize: '22px', marginBottom: '12px', color: '#6c757d' }}>Original Message:</h2>
+          <h2 style={{ fontSize: '22px', marginBottom: '12px', color: 'white' }}>Original Message:</h2>
           <p style={{
             fontSize: '20px',
             marginBottom: '30px',
