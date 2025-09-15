@@ -120,7 +120,7 @@ const Predict = () => {
       //   data: mappedData,
       // });
 
-       const res = await axios.post("https://fraud-detection-model-backend.onrender.com/predict3", {
+       const res = await axios.post("https://model3.pixbit.me/predict3", {
         data: mappedData,
       });
 

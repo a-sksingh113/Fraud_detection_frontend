@@ -28,7 +28,7 @@ const Predict = () => {
       //   body: JSON.stringify({ features }),
       // });
 
-        const response = await fetch("https://credit-card-fraud-backend.onrender.com/predict2", {
+        const response = await fetch("https://model2.pixbit.me/predict2", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ features }),

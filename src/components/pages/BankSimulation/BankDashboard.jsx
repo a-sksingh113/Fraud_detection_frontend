@@ -10,7 +10,7 @@ const BankDashboard = () => {
 
   const fetchLogs = async () => {
     try {
-      const res = await axios.get('https://spam-detector-app-backend.vercel.app/api/admin/logs');
+      const res = await axios.get('https://api.ucohakethon.pixbit.me/api/admin/logs');
       setLogs(res.data.logs || []);
     } catch (err) {
       console.error('Error fetching logs:', err);
@@ -19,7 +19,7 @@ const BankDashboard = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('https://spam-detector-app-backend.vercel.app/api/admin/users');
+      const res = await axios.get('https://api.ucohakethon.pixbit.me/api/admin/users');
       setUsers(res.data.users || []);
     } catch (err) {
       console.error('Error fetching users:', err);

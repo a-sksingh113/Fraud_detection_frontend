@@ -25,7 +25,7 @@ const Predict = () => {
       // );
 
          const response = await fetch(
-        "https://spam-sms-classifier-backend.onrender.com/predict1",
+        "https://model1.pixbit.me/predict1",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
